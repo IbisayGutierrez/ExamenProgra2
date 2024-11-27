@@ -4,10 +4,21 @@
  */
 package Paticipantes;
 
+import MAPPER.Mapper;
+import java.sql.SQLException;
+
 /**
  *
  * @author Student
  */
-public class ParticipanteMapper {
+public class ParticipanteMapper implements Mapper <Participante, ParticipanteDAO>{
+
+    @Override
+    public ParticipanteDAO toDTO(Participante ent) {  
+    }
+
+    @Override
+    public Participante toEnt(ParticipanteDAO dto) throws SQLException {
+    }
     
 }
