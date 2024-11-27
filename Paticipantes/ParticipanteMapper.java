@@ -11,14 +11,29 @@ import java.sql.SQLException;
  *
  * @author Student
  */
-public class ParticipanteMapper implements Mapper <Participante, ParticipanteDAO>{
+public class ParticipanteMapper implements Mapper <Participante, ParticipanteDTO>{
 
     @Override
-    public ParticipanteDAO toDTO(Participante ent) {  
+    public ParticipanteDTO toDTO(Participante ent) {
+        return new ParticipanteDTO(
+                   ent.getId(),
+                   ent.getNombre(),
+                   ent.getTelefono(),
+                   ent.getCorreo()
+        );
     }
 
     @Override
-    public Participante toEnt(ParticipanteDAO dto) throws SQLException {
+    public Participante toEnt(ParticipanteDTO dto) throws SQLException {
+        return new Participante(
+                   dto.getId(),
+                   dto.getNombre(),
+                   dto.getTelefono(),
+                   dto.getCorreo()
+        );
+                
     }
+
+    
     
 }
