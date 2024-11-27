@@ -12,12 +12,7 @@ import java.sql.Connection;
  * @author Student
  */
 public abstract class Dao<DTO> {
-     protected Connection connection;
-     
-    public Dao (Connection connection){
-    this.connection= connection;
-    }
-    
+
 //    public abstract boolean Insert () trows SQLExcepcion;
    
     
