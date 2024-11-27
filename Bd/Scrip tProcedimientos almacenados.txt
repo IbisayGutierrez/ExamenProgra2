@@ -1,0 +1,69 @@
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CrateTaller`(IN `pId` INT(10), IN `pNombre` VARCHAR(20), IN `pFecha` DATE, IN `pLugar` VARCHAR(40), IN `pCapacidad` INT(10))
+INSERT INTO taller VALUES(pId,pNombre,pFecha,pLugar,pCapacidad)$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CreateInscripcion`(IN `pId` INT(11), IN `pTaller` INT(11), IN `pParticipante` INT(11), IN `pFecha` DATE, IN `PAsistencia` BOOLEAN)
+INSERT INTO inscripcion VALUES(pId,pTaller,pParticipante,pFecha,pAsistencia)$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CreateParticipante`(IN `pId` INT(13), IN `pNombre` VARCHAR(30), IN `pTelefono` INT(11), IN `pCorreo` VARCHAR(25))
+INSERT INTO participante VALUES(pId,pNombre,pTelefono,pCorreo)$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteInscripcion`(IN `pId` INT(11))
+DELETE FROM Participante WHERE Id=pId$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteParticipante`(IN `pId` INT(13))
+DELETE FROM participante WHERE Id=pId$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteTaller`(IN `pId` INT(10))
+DELETE FROM taller WHERE Id=pId$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ReadAllInscripcion`(IN `pId` INT(11))
+SELECT Id,Taller,Participante,Fecha,Asistencia FROM inscripcion$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ReadAllParticipante`(IN `pId` INT(13), IN `pNombre` VARCHAR(30), IN `pTelefono` INT(11), IN `pCorreo` VARCHAR(25))
+SELECT Id,Nombre,Telefono,Correo FROM participante$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ReadAllTaller`(IN `pId` INT(10), IN `pNombre` VARCHAR(20), IN `pFecha` DATE, IN `pLugar` VARCHAR(30), IN `pCapacidad` INT)
+SELECT Id,Nombre,Fecha,Lugar,Capacidad FROM taller$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ReadInscripcion`(IN `pId` INT(11))
+SELECT Id,Taller,Participante,Fecha,Asistencia FROM inscripcion WHERE Id=pId$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ReadParticipanes`(IN `pId` INT(13))
+SELECT Id,Nombre,Telefono,Correo WHERE Id=pId$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ReadTaller`(IN `pId` INT(10))
+SELECT Id,Nombre,Fecha,Lugar,Capacidad WHERE Id=pId$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateParticipante`(IN `pId` INT(13))
+UPDATE participante SET Telefono=Telefono,Correo=Correo WHERE Id=pId$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateTaller`(IN `pNombre` VARCHAR(20), IN `pLugar` VARCHAR(40))
+UPDATE taller SET Nombre=Nombre,Lugar=Lugar WHERE Id=pId$$
+DELIMITER ;
