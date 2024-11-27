@@ -12,7 +12,7 @@ import java.sql.SQLException;
  * @author Student
  */
 public class ParticipanteMapper implements Mapper <Participante, ParticipanteDAO>{
-Participante, ParticipanteD
+
     @Override
     public ParticipanteDAO toDTO(Participante ent) {
         
