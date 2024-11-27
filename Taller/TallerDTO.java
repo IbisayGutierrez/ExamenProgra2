@@ -45,8 +45,7 @@ public class TallerDTO {
         this.Fecha = Fecha;
         this.Lugar = Lugar;
         this.Capacidad = Capacidad;
-    }
-    
+    }  
     
     
 }

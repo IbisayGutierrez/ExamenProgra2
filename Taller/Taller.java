@@ -15,7 +15,7 @@ public class Taller {
     private String Nombre;
     private LocalDate Fecha;
     private String Lugar;
-    private String Capacidad;
+    private int Capacidad;
 
     public int getId() {
         return Id;
@@ -33,7 +33,7 @@ public class Taller {
         return Lugar;
     }
 
-    public String getCapacidad() {
+    public int getCapacidad() {
         return Capacidad;
     }
 
@@ -41,7 +41,7 @@ public class Taller {
         this.Lugar = Lugar;
     }
 
-    public Taller(int Id, String Nombre, LocalDate Fecha, String Lugar, String Capacidad) {
+    public Taller(int Id, String Nombre, LocalDate Fecha, String Lugar, int Capacidad) {
         this.Id = Id;
         this.Nombre = Nombre;
         this.Fecha = Fecha;

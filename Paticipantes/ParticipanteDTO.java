@@ -29,6 +29,7 @@ public class ParticipanteDTO {
     public String getCorreo() {
         return correo;
     }
+    
 
     public ParticipanteDTO(int id, String nombre, int telefono, String correo) {
         this.id = id;
