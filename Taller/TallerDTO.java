@@ -5,6 +5,7 @@
 package Taller;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 
 
@@ -15,7 +16,7 @@ import java.time.LocalDate;
 public class TallerDTO {
     private int Id;
     private String Nombre;
-    private LocalDate Fecha;
+    private Date Fecha;
     private String Lugar;
     private int Capacidad;
 
@@ -27,7 +28,7 @@ public class TallerDTO {
         return Nombre;
     }
 
-    public LocalDate getFecha() {
+    public Date getFecha() {
         return Fecha;
     }
 
@@ -39,7 +40,7 @@ public class TallerDTO {
         return Capacidad;
     }
 
-    public TallerDTO(int Id, String Nombre, LocalDate Fecha, String Lugar, int Capacidad) {
+    public TallerDTO(int Id, String Nombre, Date Fecha, String Lugar, int Capacidad) {
         this.Id = Id;
         this.Nombre = Nombre;
         this.Fecha = Fecha;
