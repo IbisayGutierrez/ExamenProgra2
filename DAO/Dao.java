@@ -4,17 +4,21 @@
  */
 package DAO;
 
-import com.sun.jdi.connect.spi.Connection;
+import java.sql.SQLException;
+import java.sql.Connection;
 
 /**
  *
  * @author Student
  */
-public interface Dao<TallerDTO> {
+public abstract class Dao<DTO> {
+     protected Connection connection;
+     
+    public Dao (Connection connection){
+    this.connection= connection;
+    }
     
-//    protected Connection connection;
-//    public Dao (Connection connection);
-    
-//    public abstract boolean Insert (Dto dto) trows SQLExcepcion;
+//    public abstract boolean Insert () trows SQLExcepcion;
+   
     
 }
