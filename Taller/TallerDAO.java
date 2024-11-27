@@ -10,6 +10,6 @@ import DAO.Dao;
  *
  * @author Student
  */
-public class TallerDAO implements Dao {
+public class TallerDAO extends Dao {
     
 }

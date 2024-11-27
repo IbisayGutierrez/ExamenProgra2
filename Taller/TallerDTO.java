@@ -17,7 +17,7 @@ public class TallerDTO {
     private String Nombre;
     private LocalDate Fecha;
     private String Lugar;
-    private String Capacidad;
+    private int Capacidad;
 
     public int getId() {
         return Id;
@@ -35,18 +35,17 @@ public class TallerDTO {
         return Lugar;
     }
 
-    public String getCapacidad() {
+    public int getCapacidad() {
         return Capacidad;
     }
 
-    public TallerDTO(int Id, String Nombre, LocalDate Fecha, String Lugar, String Capacidad) {
+    public TallerDTO(int Id, String Nombre, LocalDate Fecha, String Lugar, int Capacidad) {
         this.Id = Id;
         this.Nombre = Nombre;
         this.Fecha = Fecha;
         this.Lugar = Lugar;
         this.Capacidad = Capacidad;
-    }
-    
+    }  
     
     
 }

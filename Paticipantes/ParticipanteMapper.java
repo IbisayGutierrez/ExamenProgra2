@@ -32,8 +32,7 @@ public class ParticipanteMapper implements Mapper <Participante, ParticipanteDTO
                    dto.getCorreo()
         );
                 
-    }
-
+ 
     
-    
+    }   
 }
